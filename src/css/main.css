@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling : touch;
+}
+
+a {
+  color: #eee;
+  text-decoration: none;
+}
+
+/* Clear Fix */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+/* Clearfix end */
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+ul {
+  list-style: none;
+}
+
+html, body {
+  height: 100%;
+  font: 14px/25px 'Avenir', 'Arial', 'sans-serif';
+}
+
+#wrapper {
+  background: #fbfbfb;
+  height: 100%;
+}
+
+footer {
+  color: #eee;
+  background: #1f1f1f;
+}
+
+main {
+  width: 100%;
+}
+
+main .content textarea {
+  font: 15px/25px 'Avenir', 'Arial', 'sans-serif';
+  background: transparent;
+  width: 100%;
+  border: 0;
+  resize: none;
+  outline: none;
+  padding: 20px 0;
+  min-height: 200px;
+}
+
+footer .wrapper {
+  padding: 0px 20px 20px 20px;
+}
+
+/* Desktop */
+@media all and (min-width: 801px) {
+  #wrapper {
+    overflow: hidden;
+  }
+
+  main, footer {
+    float: left;
+  }
+
+  main {
+    height: 100%;
+    margin-right: -260px;
+  }
+
+  main .content {
+    height: 100%;
+    margin: 0 280px 0 20px;
+    overflow-y: auto;
+    cursor: text;
+  }
+
+  footer {
+    width: 260px;
+    height: auto !important;
+    min-height: 100%;
+  }
+
+  footer .toggle {
+    margin: 20px 0 40px;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+}
+
+.desktop-only {
+  display: none;
+}
+
+.desktop .desktop-only {
+  display: block;
+}
+
+/* Mobile */
+@media all and (max-width: 800px) {
+  #wrapper {
+    position: relative;
+    height: auto !important;
+    min-height: 100%;
+  }
+
+  main {
+    min-height: 100%;
+  }
+
+  main .content {
+    padding: 0px 10px 422px;
+    border-left: 3px solid #ffa729;
+    border-right: 3px solid #ffa729;
+  }
+
+  .sys main .content {
+    border-color: #1f1f1f;
+  }
+
+  main .content textarea {
+    padding-bottom: 0;
+    -webkit-tap-highlight-color: none;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  footer .toggle {
+    margin: 10px 0 20px;
+  }
+
+  /* Candidate Window */
+  .atwho-view ul:before, .atwho-view ul:after {
+    content: "";
+    display: table;
+  }
+
+  .atwho-view ul:after {
+    clear: both;
+  }
+
+  .atwho-view ul li {
+    float: left;
+    border-right: 1px solid #333;
+  }
+}
+
+/* Switch to horizontal mode in mobile & tablet regardless of screen size */
+.mobile .atwho-view ul:before,
+.mobile .atwho-view ul:after,
+.tablet .atwho-view ul:before,
+.tablet .atwho-view ul:after {
+  content: "";
+  display: table;
+}
+
+.mobile .atwho-view ul:after,
+.tablet .atwho-view ul:after {
+  clear: both;
+}
+
+.mobile .atwho-view ul li,
+.tablet .atwho-view ul li {
+  float: left;
+  border-right: 1px solid #333;
+}
+
+footer .logo {
+  background: url('../images/logo-secondary.png') no-repeat bottom right;
+  margin-top: 10px;
+  height: 40px;
+  padding-top: 10px;
+  border-top: 1px solid #333;
+}
+
+footer .social {
+  text-align: right;
+  height: 32px;
+  margin: 10px 0;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+footer h2 {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+footer ul li a {
+  display: block;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+footer ul li.active a {
+  background: #ffa729;
+  color: #1f1f1f;
+  border-radius: 2px;
+}
+
+footer .social img {
+  height: 32px;
+  width: 32px;
+}
+
+/* Checkbox */
+input, textarea, select, button, label {
+  margin: 0;
+  line-height: normal;
+  font-family: inherit;
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.switch {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 58px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.switch>input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  opacity: 0;
+  -webkit-appearance: none;
+}
+
+.switch>input:checked+label {
+  padding-left: 33px;
+  color: #1f1f1f;
+  background: #ffa729;
+  border-color: #ffa729;
+}
+
+.switch>label {
+  display: block;
+  position: relative;
+  height: 25px;
+  line-height: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #ffa729;
+  text-align: center;
+  text-transform: uppercase;
+  background: #1f1f1f;
+  border: 2px solid #ffa729;
+  border-radius: 13px;
+  -webkit-transition: 0.15s ease-out;
+  -moz-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.switch>input:checked+label:before {
+  content: attr(data-on);
+  left: 1px;
+}
+
+.switch>label:before {
+  content: attr(data-off);
+  position: absolute;
+  top: 0;
+  right: 3px;
+  width: 33px;
+}
+
+.switch>input:checked+label:after {
+  margin: 1px;
+  width: 19px;
+  height: 19px;
+  background: #1f1f1f;
+}
+
+.switch>label:after {
+  content: '';
+  display: block;
+  margin: 2px;
+  width: 17px;
+  height: 17px;
+  background: #ffa729;
+  border-radius: 13px;
+}
+/* Checkbox End */
+
+.label {
+  font: 13px/13px 'Menlo', monospace;
+  font-weight: bold;
+  padding: 5px 7px;
+  background: #ffa729;
+  color: #1f1f1f;
+  border-radius: 2px;
+  margin-right: 2px;
+}
+
+.label.normal {
+  color: #ffa729;
+  background: #1f1f1f;
+}
+
+.slogan {
+  padding: 5px 0;
+  text-align: right;
+}
+
+/*atwho*/
+.atwho-view {
+  background: #1f1f1f;
+  color: #eee;
+}
+
+.atwho-view .cur {
+  background: #ffa729;
+}
+
+.atwho-view .cur a {
+  color: #1f1f1f !important;
+}
+
+.atwho-view ul li {
+  border-bottom-color: #333;
+  -webkit-tap-highlight-color: #ffa729;
+}
+
+.atwho-view ul li:last-child a {
+  color: #ffa544;
+}
+.atwho-view ul li:last-child {
+  border: none;
+}
+
+.atwho-view ul li a {
+  -webkit-tap-highlight-color: #ffa729;
+}
+
+/* Swipe */
+.swipe {
+  display: none;
+  overflow: hidden;
+  width: 220px;
+}
+
+.mobile .swipe,
+.tablet .swipe {
+  display: block;
+}
+
+.swipe div {
+  font-size: 17px;
+  background: -webkit-gradient(linear,left top,right top,color-stop(0, #4d4d4d),color-stop(0.4, #4d4d4d),color-stop(0.5, white),color-stop(0.6, #4d4d4d),color-stop(0.9, #4d4d4d));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: slidetounlock 5s infinite;
+  /* dirty animation fix*/
+  padding-left: 60px;
+  margin-left: -60px;
+  width: 200%;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@-webkit-keyframes slidetounlock {
+  0% {
+    background-position: -220px 0;
+  }
+  100% {
+    background-position: 220px 0;
+  }
+}

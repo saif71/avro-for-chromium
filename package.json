@@ -1,0 +1,28 @@
+{
+  "name": "avro-for-chromium",
+  "version": "1.0.0",
+  "description": "Avro extension for chrome . Write bangla instantly.\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[ium based browser. \u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C Wtire bangla instantly.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saif71/avro-for-chromium.git"
+  },
+  "keywords": [
+    "avro",
+    "bangla",
+    "bangla",
+    "keyboard",
+    "bengali"
+  ],
+  "author": "Salman Hossain Saif",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/saif71/avro-for-chromium/issues"
+  },
+  "homepage": "https://github.com/saif71/avro-for-chromium#readme",
+  "dependencies": {},
+  "devDependencies": {}
+}
