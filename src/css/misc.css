@@ -1,4 +1,13 @@
-#loader {
+body {
+    background: #ffffff;
+    margin: 0;
+    /* width: 380px; */
+    width: 450px;
+    height: 580px;
+    border-radius: 25px;
+    overflow-x:hidden;
+  }
+loader {
     position: absolute;
     top: 0;
     left: 0;

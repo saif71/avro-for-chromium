@@ -25,6 +25,7 @@ function switchMode() {
 function loadModePref() {
 
     console.log(localStorage.getItem("modePrefLS")+ " mode loaded");
+    
     var modeLoad = localStorage.getItem("modePrefLS");
 
     if (modeLoad === "light" || modeLoad === null) {
