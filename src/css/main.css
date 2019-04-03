@@ -61,7 +61,7 @@ main .content textarea {
   background: transparent;
   width: 100%;
   border: 0;
-  resize: none;
+  resize: none !important;
   outline: none;
   padding: 20px 0;
   min-height: 200px;

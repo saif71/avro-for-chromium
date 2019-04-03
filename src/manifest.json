@@ -15,7 +15,6 @@
       "background": {
         "persistent": false,
         "scripts": [
-          "OneSignal.js",
           "background.js",
           "vendor/jquery/dist/jquery.js",
           "vendor/Caret.js/src/jquery.caret.js",
@@ -30,11 +29,11 @@
         ]
       },
       
-      "permissions": ["gcm", "storage", "notifications"],
+      "permissions": ["storage"],
       
     
      "name":"Avro (অভ্র) for Chrome",
      "short_name":"Avro(অভ্র)",
-     "version":"1.0.0",
+     "version":"1.0.1",
      "description":"Avro extension for chrome . Write bangla instantly."
     }
