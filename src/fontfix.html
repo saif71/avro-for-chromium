@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Font Fixer</title>
+</head>
+<style>
+    body{
+        width:300px ;
+        margin: 0;
+    }
+   /* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #2c3e50;
+  background-image: none;
+}
+/* Custom Select */
+.select {
+    position: relative;
+    display: block;
+    width: 206px;
+    height: 3em;
+    line-height: 3;
+    background: #2c3e50;
+    overflow: hidden;
+    border-radius: .25em;
+    float: left;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+select::-ms-expand {
+  display: none;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  background: #34495e;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+.select::after {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+.btn1 button {
+    background: #ffa729;
+    width: 80px;
+    height: 36px;
+    color: #1f1f1f;
+    border: 0;
+    border-radius: .25em;
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+.btn1 button:hover {
+    background: #ffa729;
+    cursor: pointer;
+}
+.back_to_home a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.back_to_home {
+    background: #eaeaea;
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.back_links {
+    margin-left: 25px;
+    line-height: 20px;
+}
+</style>
+<body>
+        <div class="back_to_home">
+                <a href="index.html"><img src="images/back.svg" alt="Back to Writings" width="20px" style="float:left">
+                    <div class="back_links">Back</div> 
+                </a> 
+            </div>
+    <div class="font_fixer_banner" style="text-align:center">
+        <img src="images/font_fixer_banner.png" alt="" width="300px">
+    </div>
+    <div >
+    <div class="select" name="slct" class="slct">
+        <select id="selection">
+             <option value="" disabled selected>Choose a font</option>
+            <option value="Kalpurush">Kalpurush</option>
+            <option value="Siyam Rupali" selected>Siyam Rupali</option>
+            <option value="SolaimanLipi">Solaiman Lipi</option>
+            <option value="Nirmala UI">Nirmala UI</option>
+
+        </select>
+    </div>     
+
+    </div>
+    <div class="btn1">
+    <button id="saveButton">Apply</button>
+    </div>
+
+    
+    <script src="js/popup.js"></script>
+
+</body>
+</html>

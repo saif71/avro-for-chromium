@@ -28,12 +28,18 @@
           "js/options.js"
         ]
       },
-      
-      "permissions": ["storage"],
+      "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["js/fontfix.js"],
+          "run_at": "document_end"
+        }
+      ],
+      "permissions": ["storage","tabs","activeTab"],
       
     
      "name":"Avro (অভ্র) for Chrome",
      "short_name":"Avro(অভ্র)",
-     "version":"1.0.1",
+     "version":"1.2.0",
      "description":"Avro extension for chrome . Write bangla instantly."
     }
