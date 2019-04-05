@@ -1,5 +1,5 @@
   
-  
+
 
 ## Avro (অভ্র) for Chrome . Write Bangla instantly.
 
@@ -31,8 +31,10 @@ for chrome works with any chromium based browser that supports installing extens
 
   
 
-- It works offline.
-- It's fast and instant, there is no round trip delay for processing every word you type.
+- It works **offline**.
+- It's **fast and instant**, there is no round trip delay for processing every word you type.
+- Save up to **"5 Draft Items"** for later use. 
+- Introducing iconic **"Avro Font Fixer"**. Now you can apply default bangla font and fix bangla font problem in Chrome. 
 - It values privacy. Whatever you write or save in the drafts don't leave your browser unless you want them to.
 - Drafts are only saved locally on your machine and not being sent anywhere. 
 - It doesn’t collect any of your personal info, including your IP address. even no analytics code  has been put in the code explicitly. 

@@ -237,3 +237,12 @@ loader {
     line-height: 57px;
     margin-right: 10px;
 }
+.font_fix_btn {
+    font: 13px/13px 'Menlo', sans-serif;
+    font-weight: bold;
+    padding: 6px 10px;
+    background: #4CAF50;
+    color: #ffffff;
+    border-radius: 2px;
+    margin-right: 2px;
+}
