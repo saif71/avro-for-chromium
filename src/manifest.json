@@ -40,18 +40,17 @@
             "vendor/device.js/lib/device.js",
             "js/fontfix.js",
             "js/avro.min.js",
-            "js/main_injected.js",
-            "background.js"
+            "js/main_injected.js"
           ],
           "css" : ["css/inject.css"],
           "run_at": "document_end"
         }
       ],
       "permissions": ["storage","tabs","<all_urls>"],
-      "web_accessible_resources": ["vendor/jquery.atwho/dist/css/jquery.atwho.css"],
+      "web_accessible_resources": ["vendor/jquery.atwho/dist/css/jquery.atwho.css","float_option.html"],
     
      "name":"Avro (অভ্র) for Chrome",
      "short_name":"Avro(অভ্র)",
-     "version":"1.2.4",
+     "version":"2.0.0",
      "description":"Avro extension for chrome . Write bangla instantly."
     }

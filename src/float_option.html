@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="_avc_float_icon">
+
+
+    <div class="cf toggle">    
+        
+        <span class="switch left">
+            <input type="checkbox" id="state" checked="" class="_avc_checkbox">
+            <label for="state" data-on="BN" data-off="EN"></label>
+        </span>
+
+
+
+
+
+    </div>
+  </div>
+
+    <style>
+    ._avc_float_icon {
+    background: red;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    z-index: 999999;
+    border-radius: 100px;
+    bottom: 30px;
+    right: 10px;
+}
+._avc_checkbox {
+    height: 23px;
+    width: 23px;
+}
+    </style>
+    <script>
+      
+$("._avc_checkbox").click(function(){
+    if (document.getElementsByClassName('_avc_checkbox').checked === true){
+        chrome.runtime.sendMessage({greeting: "bn_enable"}, function(response) {
+    console.log(response.farewell);
+});
+    }
+    else{
+        chrome.runtime.sendMessage({greeting: "en_enable"}, function(response) {
+    console.log(response.farewell);
+});
+    }
+  
+
+
+
+  });
+    </script>
+</body>
+</html>
