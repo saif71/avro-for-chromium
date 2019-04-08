@@ -352,3 +352,5 @@ $(function () {
   handleAppCache();
 
 });
+
+alert('loaded');

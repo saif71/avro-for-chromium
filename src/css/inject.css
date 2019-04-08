@@ -1,0 +1,132 @@
+.atwho-view {
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    margin-top: 18px;
+    background: #232323;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    min-width: 120px;
+    z-index: 11110 !important;
+}
+
+.atwho-view .cur {
+    background: #ffa729;
+    color: #232323;
+}
+.atwho-view .cur small {
+    color: white;
+}
+.atwho-view strong {
+    color: #3366FF;
+}
+.atwho-view .cur strong {
+    color: white;
+    font:bold;
+}
+.atwho-view ul {
+    /* width: 100px; */
+    list-style:none;
+    padding:0;
+    margin:auto;
+}
+.atwho-view ul li {
+    display: block;
+    padding: 5px 10px;
+    border-bottom: 1px solid #DDD;
+    cursor: pointer;
+    /* border-top: 1px solid #C8C8C8; */
+}
+.atwho-view small {
+    font-size: smaller;
+    color: #777;
+    font-weight: normal;
+}
+/* Mobile */
+@media all and (max-width: 800px) {
+    #wrapper {
+      position: relative;
+      height: auto !important;
+      min-height: 100%;
+    }
+  
+    main {
+      min-height: 100%;
+    }
+  
+    main .content {
+      padding: 0px 10px 388px;
+      border-left: 3px solid #ffa729;
+      border-right: 3px solid #ffa729;
+    }
+  
+    .sys main .content {
+      border-color: #1f1f1f;
+    }
+  
+    main .content textarea {
+      padding-bottom: 0;
+      -webkit-tap-highlight-color: none;
+    }
+  
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  
+    footer .toggle {
+      margin: 10px 0 20px;
+    }
+  
+    /* Candidate Window */
+    .atwho-view ul:before, .atwho-view ul:after {
+      content: "";
+      display: table;
+    }
+  
+    .atwho-view ul:after {
+      clear: both;
+    }
+  
+    .atwho-view ul li {
+      float: left;
+      border-right: 1px solid #333;
+    }
+  }
+
+
+  /**/
+  /*atwho*/
+.atwho-view {
+    background: #1f1f1f;
+    color: #eee;
+  }
+  
+  .atwho-view .cur {
+    background: #ffa729;
+  }
+  
+  .atwho-view .cur a {
+    color: #1f1f1f !important;
+  }
+  
+  .atwho-view ul li {
+    border-bottom-color: #333;
+    -webkit-tap-highlight-color: #ffa729;
+  }
+  
+  .atwho-view ul li:last-child a {
+    color: #ffa544;
+  }
+  .atwho-view ul li:last-child {
+    border: none;
+  }
+  
+  .atwho-view ul li a {
+    -webkit-tap-highlight-color: #ffa729;
+    color: #ffffff !important;
+  }
+ 

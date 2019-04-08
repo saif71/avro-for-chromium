@@ -25,18 +25,30 @@
           "js/avro.min.js",
           "js/main.js",
           "js/misc.js",
+          "js/main_injected.js",
           "js/options.js"
         ]
       },
       "content_scripts": [
         {
           "matches": ["<all_urls>"],
-          "js": ["js/fontfix.js"],
+          "js": [
+            "vendor/jquery/dist/jquery.js",
+            "vendor/Caret.js/src/jquery.caret.js",
+            "vendor/jquery.atwho/dist/js/jquery.atwho.js",
+            "vendor/jquery-autosize/jquery.autosize.js",
+            "vendor/device.js/lib/device.js",
+            "js/fontfix.js",
+            "js/avro.min.js",
+            "js/main_injected.js",
+            "background.js"
+          ],
+          "css" : ["css/inject.css"],
           "run_at": "document_end"
         }
       ],
       "permissions": ["storage","tabs","<all_urls>"],
-      
+      "web_accessible_resources": ["vendor/jquery.atwho/dist/css/jquery.atwho.css"],
     
      "name":"Avro (অভ্র) for Chrome",
      "short_name":"Avro(অভ্র)",
