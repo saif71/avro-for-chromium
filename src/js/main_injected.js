@@ -18,7 +18,7 @@ $(function () {
         loadDraftId,
         currentDraftId,
         makeTitle,
-        $editor = $('textarea'),
+        $editor = $('input[type=text], textarea'),
         $statusControl = $('#state'),
         $current,
         isBN = false,
