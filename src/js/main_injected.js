@@ -21,7 +21,7 @@ $(function () {
         $editor = $('textarea'),
         $statusControl = $('#state'),
         $current,
-        isBN = true,
+        isBN = false,
         // Length of draft title in chars
         titleLength = 25,
         LS = window.localStorage,
