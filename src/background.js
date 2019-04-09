@@ -2,12 +2,12 @@
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
       if (request.greeting == "bn_enable"){
-        sendResponse({farewell: "Bangla Enabled"});
+        sendResponse({farewell: "BN Enabled"});
         chrome.browserAction.setBadgeText({text: "BN"});
     }
 
-    else{
+    else if (request.avc_mode == "en_enable"){
         sendResponse({farewell: "English Enabled"});
-        chrome.browserAction.setBadgeText({text: "EN"});
+        chrome.browserAction.setBadgeText({text: ""});
     }
     });

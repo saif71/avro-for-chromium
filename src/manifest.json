@@ -36,7 +36,6 @@
             "vendor/jquery/dist/jquery.js",
             "vendor/Caret.js/src/jquery.caret.js",
             "vendor/jquery.atwho/dist/js/jquery.atwho.js",
-            "vendor/jquery-autosize/jquery.autosize.js",
             "vendor/device.js/lib/device.js",
             "js/fontfix.js",
             "js/avro.min.js",

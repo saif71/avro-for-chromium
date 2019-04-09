@@ -13,7 +13,7 @@
     <div class="cf toggle">    
         
         <span class="switch left">
-            <input type="checkbox" id="state" class="_avc_checkbox">
+            <input type="checkbox" id="avc_state" class="_avc_checkbox">
             <label for="state" data-on="BN" data-off="EN"></label>
         </span>
 
@@ -42,16 +42,12 @@
     </style>
     <script>
       
-$("._avc_checkbox").click(function(){
-    if (document.getElementsByClassName('_avc_checkbox').checked === true){
-        chrome.runtime.sendMessage({greeting: "bn_enable"}, function(response) {
-    console.log(response.farewell);
-});
+$("._avc_checkbox").change(function(){
+    if (document.getElementById('avc_state').checked == true){
+        chrome.runtime.sendMessage({greeting: "bn_enable"}, function(response) {console.log(response.farewell);});
     }
     else{
-        chrome.runtime.sendMessage({greeting: "en_enable"}, function(response) {
-    console.log(response.farewell);
-});
+        chrome.runtime.sendMessage({avc_mode: "en_enable"}, function(response) {console.log(response.farewell);});
     }
   
 

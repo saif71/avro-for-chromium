@@ -19,7 +19,7 @@ $(function () {
         currentDraftId,
         makeTitle,
         $editor = $('input[type=text], textarea'),
-        $statusControl = $('#state'),
+        $statusControl = $('#avc_state'),
         $current,
         isBN = false,
         // Length of draft title in chars
@@ -105,8 +105,8 @@ $(function () {
     //   };
 
     loadDraftId = function (id) {
-        $editor.val(drafts[id]);
-        $editor.trigger('autosize.resize').focus();
+        //$editor.val(drafts[id]);
+        //$editor.trigger('autosize.resize').focus();
     };
 
     // Event Handlers
@@ -138,7 +138,7 @@ $(function () {
 
     // The TextArea
     $editor
-        .autosize()
+        //.autosize()
         .prop('disabled', false)
         .atwho({
             at: '',
@@ -254,7 +254,7 @@ $(function () {
             LS['draft-' + currentDraftId] = JSON.stringify(content);
             // $current.text(makeTitle(content, currentDraftId));
         })
-        .focus()
+        //.focus()
         // Sorcery
         .data('atwho').on_keydown = function (e) {
             var extraKeys = [192, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 189, 187, 219, 221, 186, 222, 188, 190, 191, 106, 107, 109, 110, 111, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105];
@@ -322,9 +322,9 @@ $(function () {
             }
         };
 
-    $('.content').on('click', function () {
-        $editor.focus();
-    });
+    // $('.content').on('click', function () {
+    //     $editor.focus();
+    // });
 
     //$.fn.swipe.defaults.excludedElements = 'label, button, input, select, a, .noSwipe';
 
