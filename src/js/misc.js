@@ -1,41 +1,48 @@
-function changeCSS(cssFile, cssLinkIndex) {
+document.getElementById("myCheckbox").addEventListener("change", switchMode);
+function applyDark(){
+    $("#wrapper").addClass("wrapper_dark");
+    $("#wrapper").removeClass("wrapper_light");
 
-    var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+    $("textarea").addClass("text_dark_mode");
+    $("footer").addClass("footer_dark");
+}
 
-    var newlink = document.createElement("link");
-    newlink.setAttribute("rel", "stylesheet");
-    newlink.setAttribute("type", "text/css");
-    newlink.setAttribute("href", cssFile);
-
-    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+function applyLight(){
+    $("#wrapper").addClass("wrapper_light");
+    $("#wrapper").removeClass("wrapper_dark");
+    $("textarea").removeClass("text_dark_mode");
+    $("footer").removeClass("footer_dark");
 }
 
 function switchMode() {
 
     if (document.getElementById("myCheckbox").checked === true) {
-        changeCSS('css/main_dark.css', 1);
+        // changeCSS('/css/main_dark.css', 2);
+        applyDark()
         localStorage.setItem("modePrefLS", "dark");
 
     } else {
-        changeCSS('css/main.css', 1);
+        // changeCSS('/css/main.css', 2);
+        applyLight()
         localStorage.setItem("modePrefLS", "light");
     }
 
 }
+
+
 function loadModePref() {
 
     console.log(localStorage.getItem("modePrefLS")+ " mode loaded");
-    
     var modeLoad = localStorage.getItem("modePrefLS");
 
     if (modeLoad === "light" || modeLoad === null) {
 
-        changeCSS('css/main.css', 1);
+        applyLight()
         document.getElementById("myCheckbox").checked = false;
     }
     else {
 
-        changeCSS('css/main_dark.css', 1);
+        applyDark()
         document.getElementById("myCheckbox").checked = true;
     }
 }

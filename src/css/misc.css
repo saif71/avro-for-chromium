@@ -227,11 +227,11 @@ loader {
     }
 }
 
-.mode_switch {
+/* .mode_switch {
     margin-bottom: 15px;
     float: right;
 
-}
+} */
 .mode_lebel {
     float: left;
     line-height: 57px;
