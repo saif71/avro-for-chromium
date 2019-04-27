@@ -15,7 +15,7 @@
 	<title>avro.im | Write Bangla Instantly</title>
 	<!-- build:css css/app.css -->
 	<link rel="stylesheet" href="vendor/jquery.atwho/dist/css/jquery.atwho.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/main_dark.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen">
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 	<link rel="stylesheet" href="css/misc.css">
 	<!-- endbuild -->
@@ -25,7 +25,7 @@
 </head>
 
 <body>
-	<div id="loader" style="display:none">
+	<!-- <div id="loader" style="display:block">
 		<div class="container">
 			<div class="anim-container">
 				<div class="ex"></div>
@@ -35,13 +35,13 @@
 			</div>
 			<h1>Loading for the last Time...</h1>
 		</div>
-	</div>
-	<script>
+	</div> -->
+	<!-- <script>
 		setTimeout(function () {
 			var elem = document.getElementById("loader");
 			if (!!elem) elem.style.display = "block";
 		}, 500);
-	</script>
+	</script> -->
 	<div id="wrapper" class="cf">
 		<main>
 			<div class="content">
@@ -66,12 +66,16 @@
 					</span>
 
 					
-					<!-- <span class="switch mode_switch">
-						<input type="checkbox" id="myCheckbox" onchange="switchMode()" checked="">
+				
+					<br>
+					<span class="switch mode_switch">
+						<input type="checkbox" id="myCheckbox"  checked="">
 						<label for="myCheckbox" data-on="Dark" data-off="Light"></label>
 
-					</span> -->
-					<!-- <div class="mode_lebel">Change Mode</div> -->
+						
+
+					</span>
+					<div class="mode_label">Change Mode</div>
 
 
 
