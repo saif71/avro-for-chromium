@@ -67,6 +67,8 @@ for chrome works with any chromium based browser that supports installing extens
 - Salman Hossain Saif
 
   
+## Supported Browsers
+
 
   
 
@@ -100,4 +102,4 @@ Avro (অভ্র) for Chrome is licensed under Mozilla Public License 2.0 ("MP
 
 ## Download from Chrome Web Store
 
-[Install on Chrome](https://chrome.google.com/webstore/detail/avro-%E0%A6%85%E0%A6%AD%E0%A7%8D%E0%A6%B0-for-chrome/lhkaiconcchjcnnikjdphljgfpjelpnj/)
+[Download via Chrome Web Store](https://chrome.google.com/webstore/detail/avro-%E0%A6%85%E0%A6%AD%E0%A7%8D%E0%A6%B0-for-chrome/lhkaiconcchjcnnikjdphljgfpjelpnj/)
