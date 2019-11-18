@@ -69,7 +69,7 @@ for chrome works with any chromium based browser that supports installing extens
   
 ## Supported Browsers
 
-
+![Supported Browsers](store_resources/chrome/supported_browsers.png)
   
 
 ## License
