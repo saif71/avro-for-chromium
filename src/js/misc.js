@@ -1,5 +1,5 @@
 document.getElementById("myCheckbox").addEventListener("change", switchMode);
-function applyDark(){
+function applyDark() {
     $("#wrapper").addClass("wrapper_dark");
     $("#wrapper").removeClass("wrapper_light");
 
@@ -7,7 +7,7 @@ function applyDark(){
     $("footer").addClass("footer_dark");
 }
 
-function applyLight(){
+function applyLight() {
     $("#wrapper").addClass("wrapper_light");
     $("#wrapper").removeClass("wrapper_dark");
     $("textarea").removeClass("text_dark_mode");
@@ -32,7 +32,7 @@ function switchMode() {
 
 function loadModePref() {
 
-    console.log(localStorage.getItem("modePrefLS")+ " mode loaded");
+    console.log(localStorage.getItem("modePrefLS") + " mode loaded");
     var modeLoad = localStorage.getItem("modePrefLS");
 
     if (modeLoad === "light" || modeLoad === null) {
