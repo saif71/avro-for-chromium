@@ -469,3 +469,10 @@ label {
   padding: 10px;
   color: #eee;
 }
+#copy-btn {
+  border: 2px solid #ffa729;
+  background: none;
+  color: #ffa729;
+  border-radius: 8px;
+  padding: 5px 10px;
+}

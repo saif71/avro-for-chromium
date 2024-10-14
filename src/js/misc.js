@@ -62,14 +62,6 @@ $("#add_draft").click(function () {
 });
 
 
-// console.log(window.localStorage.length)
-// if (window.localStorage.length > 1) {
-//     for (var i = 0; i < (window.localStorage.length - 1); i++) {
-//         var new_draft_html =
-//             '<li><a href="#">-</a></li>';
-//         $(".drafts ul").append(new_draft_html);
-//     }
-// }
 function addDraftsFromLocalStorage() {
     var draftKeys = [];
     for (var i = 0; i < window.localStorage.length; i++) {
@@ -87,3 +79,18 @@ function addDraftsFromLocalStorage() {
 }
 
 addDraftsFromLocalStorage();
+
+$("#copy-btn").click(function () {
+    var copyText = document.querySelector("textarea");
+    copyText.select();
+    navigator.clipboard.writeText(copyText.value)
+        .then(() => {
+            $(this).html("✅ কপি হয়েছে");
+            setTimeout(function () {
+                $("#copy-btn").html("লেখা কপি করুন");
+            }, 2000);
+        })
+        .catch(err => {
+            console.error('Could not copy text: ', err);
+        });
+});
