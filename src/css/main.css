@@ -464,3 +464,8 @@ label {
 .drafts-section {
   margin: 20px 0;
 }
+.config_panel {
+  background: #1f1f1f;
+  padding: 10px;
+  color: #eee;
+}
