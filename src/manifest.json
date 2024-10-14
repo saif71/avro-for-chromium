@@ -24,7 +24,7 @@
       "run_at": "document_end"
     }
   ],
-  "permissions": ["tabs", "storage"],
+  "permissions": ["storage"],
   "web_accessible_resources": [
     {
       "resources": [
