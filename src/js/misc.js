@@ -62,11 +62,28 @@ $("#add_draft").click(function () {
 });
 
 
-console.log(window.localStorage.length)
-if (window.localStorage.length > 2) {
-    for (var i = 0; i < (window.localStorage.length - 2); i++) {
+// console.log(window.localStorage.length)
+// if (window.localStorage.length > 1) {
+//     for (var i = 0; i < (window.localStorage.length - 1); i++) {
+//         var new_draft_html =
+//             '<li><a href="#">-</a></li>';
+//         $(".drafts ul").append(new_draft_html);
+//     }
+// }
+function addDraftsFromLocalStorage() {
+    var draftKeys = [];
+    for (var i = 0; i < window.localStorage.length; i++) {
+        var key = window.localStorage.key(i);
+        if (key.indexOf("draft-") === 0) {
+            draftKeys.push(key);
+        }
+    }
+    for (var i = 0; i < draftKeys.length - 1; i++) {
         var new_draft_html =
             '<li><a href="#">-</a></li>';
         $(".drafts ul").append(new_draft_html);
     }
+    document.getElementById("draft_count").innerHTML = draftKeys.length;
 }
+
+addDraftsFromLocalStorage();

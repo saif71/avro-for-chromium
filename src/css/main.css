@@ -437,7 +437,7 @@ label {
 #add_draft {
   border: 2px solid #ffa729;
   background: none;
-  color: white;
+  color: #ffa729;
   border-radius: 8px;
   padding: 5px 10px;
 }
