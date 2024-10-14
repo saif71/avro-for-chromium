@@ -49,14 +49,24 @@ function loadModePref() {
 
 loadModePref();
 
-var draft_count = 5;
+
 
 $("#add_draft").click(function () {
-    var new_draft = "Empty Draft " + (draft_count + 1);
+    var new_draft = "শুন্য ড্রাফট ";
     if (new_draft) {
         var new_draft_html =
             '<li><a href="#">' + new_draft + "</a></li>";
         $(".drafts ul").append(new_draft_html);
-        draft_count++;
+
     }
 });
+
+
+console.log(window.localStorage.length)
+if (window.localStorage.length > 2) {
+    for (var i = 0; i < (window.localStorage.length - 2); i++) {
+        var new_draft_html =
+            '<li><a href="#">-</a></li>';
+        $(".drafts ul").append(new_draft_html);
+    }
+}

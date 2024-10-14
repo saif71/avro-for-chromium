@@ -20,9 +20,6 @@ a {
   clear: both;
 }
 
-.cf {
-  *zoom: 1;
-}
 /* Clearfix end */
 
 .left {
@@ -259,7 +256,6 @@ label {
   width: inherit;
   height: inherit;
   opacity: 0;
-  -webkit-appearance: none;
 }
 
 .switch > input:checked + label {
@@ -393,9 +389,9 @@ label {
     color-stop(0.6, #4d4d4d),
     color-stop(0.9, #4d4d4d)
   );
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
   -webkit-text-fill-color: transparent;
-  -webkit-animation: slidetounlock 5s infinite;
+  /* -webkit-animation: slidetounlock 5s infinite; */
   /* dirty animation fix*/
   padding-left: 60px;
   margin-left: -60px;
@@ -406,6 +402,14 @@ label {
 }
 
 @-webkit-keyframes slidetounlock {
+  0% {
+    background-position: -220px 0;
+  }
+  100% {
+    background-position: 220px 0;
+  }
+}
+@keyframes slidetounlock {
   0% {
     background-position: -220px 0;
   }
