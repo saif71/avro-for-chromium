@@ -66,29 +66,44 @@
       </main>
       <footer>
         <div class="wrapper">
-          <div class="cf toggle">
+          <div class="cf toggle flex justify-between">
             <!-- <a href="fontfix.html" class="right font_fix_btn" title="Font Fixer: Set Default Bangla Font"> 🛠  Bangla Font Fixer</a> -->
             <!-- <div class="desktop-only label left">CONTROL</div>
 					<div class="desktop-only label left normal">+</div>
 					<div class="desktop-only label left">.</div> -->
-            <div class="desktop-only left">Writing Mode&nbsp;&nbsp;</div>
-            <div class="swipe left">
-              <div>swipe anywhere to switch</div>
+            <div>
+              <div class="desktop-only left">টাইপ মোড&nbsp;&nbsp;</div>
+              <div class="swipe left">
+                <div>swipe anywhere to switch</div>
+              </div>
+              <span class="switch left">
+                <input type="checkbox" id="state" checked="" />
+                <label for="state" data-on="বাংলা" data-off="ইংলিশ"></label>
+              </span>
             </div>
-            <span class="switch left">
-              <input type="checkbox" id="state" checked="" />
-              <label for="state" data-on="BN" data-off="EN"></label>
-            </span>
-
-            <br />
-            <span class="switch mode_switch">
-              <input type="checkbox" id="myCheckbox" checked="" />
-              <label for="myCheckbox" data-on="Dark" data-off="Light"></label>
-            </span>
-            <div class="mode_label">Change Mode</div>
+            <div class="flex gap-2">
+              <div class="mode_label">থিম</div>
+              <span class="switch mode_switch">
+                <input type="checkbox" id="myCheckbox" checked="" />
+                <label for="myCheckbox" data-on="ডার্ক" data-off="লাইট"></label>
+              </span>
+            </div>
           </div>
           <div class="drafts">
-            <h2>ড্রাফট সমূহ</h2>
+            <div
+              class="flex items-center justify-between align-center drafts-section"
+            >
+              <div class="flex items-center align-center gap-2">
+                <img
+                  src="./images/drafts.svg"
+                  alt=""
+                  width="20px"
+                  height="20px"
+                />
+                <h2>ড্রাফট সমূহ</h2>
+              </div>
+              <button id="add_draft" class="btn">+ নতুন ড্রাফট</button>
+            </div>
             <ul>
               <li><a href="#">ড্রাফট ১</a></li>
               <li><a href="#">ড্রাফট ২</a></li>

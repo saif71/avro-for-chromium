@@ -48,3 +48,15 @@ function loadModePref() {
 }
 
 loadModePref();
+
+var draft_count = 5;
+
+$("#add_draft").click(function () {
+    var new_draft = "Empty Draft " + (draft_count + 1);
+    if (new_draft) {
+        var new_draft_html =
+            '<li><a href="#">' + new_draft + "</a></li>";
+        $(".drafts ul").append(new_draft_html);
+        draft_count++;
+    }
+});
