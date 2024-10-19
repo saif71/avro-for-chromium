@@ -94,3 +94,10 @@ $("#copy-btn").click(function () {
             console.error('Could not copy text: ', err);
         });
 });
+
+$("#pop-btn").on("click", function () {
+    chrome.windows.create({
+        url: chrome.runtime.getURL("index.html"),
+        type: "popup"
+    });
+})

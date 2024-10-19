@@ -458,6 +458,9 @@ label {
 .justify-between {
   justify-content: space-between;
 }
+.justify-end {
+  justify-content: end;
+}
 .align-center {
   vertical-align: middle;
 }
@@ -475,4 +478,9 @@ label {
   color: #ffa729;
   border-radius: 8px;
   padding: 5px 10px;
+}
+#pop-btn {
+  background: none;
+  border: none;
+  background-color: transparent;
 }
