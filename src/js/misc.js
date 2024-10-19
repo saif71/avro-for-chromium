@@ -1,5 +1,5 @@
 document.getElementById("myCheckbox").addEventListener("change", switchMode);
-function applyDark(){
+function applyDark() {
     $("#wrapper").addClass("wrapper_dark");
     $("#wrapper").removeClass("wrapper_light");
 
@@ -7,7 +7,7 @@ function applyDark(){
     $("footer").addClass("footer_dark");
 }
 
-function applyLight(){
+function applyLight() {
     $("#wrapper").addClass("wrapper_light");
     $("#wrapper").removeClass("wrapper_dark");
     $("textarea").removeClass("text_dark_mode");
@@ -32,7 +32,7 @@ function switchMode() {
 
 function loadModePref() {
 
-    console.log(localStorage.getItem("modePrefLS")+ " mode loaded");
+    console.log(localStorage.getItem("modePrefLS") + " mode loaded");
     var modeLoad = localStorage.getItem("modePrefLS");
 
     if (modeLoad === "light" || modeLoad === null) {
@@ -48,3 +48,49 @@ function loadModePref() {
 }
 
 loadModePref();
+
+
+
+$("#add_draft").click(function () {
+    var new_draft = "শুন্য ড্রাফট ";
+    if (new_draft) {
+        var new_draft_html =
+            '<li><a href="#">' + new_draft + "</a></li>";
+        $(".drafts ul").append(new_draft_html);
+
+    }
+});
+
+
+function addDraftsFromLocalStorage() {
+    var draftKeys = [];
+    for (var i = 0; i < window.localStorage.length; i++) {
+        var key = window.localStorage.key(i);
+        if (key.indexOf("draft-") === 0) {
+            draftKeys.push(key);
+        }
+    }
+    for (var i = 0; i < draftKeys.length - 1; i++) {
+        var new_draft_html =
+            '<li><a href="#">-</a></li>';
+        $(".drafts ul").append(new_draft_html);
+    }
+    document.getElementById("draft_count").innerHTML = draftKeys.length;
+}
+
+addDraftsFromLocalStorage();
+
+$("#copy-btn").click(function () {
+    var copyText = document.querySelector("textarea");
+    copyText.select();
+    navigator.clipboard.writeText(copyText.value)
+        .then(() => {
+            $(this).html("✅ কপি হয়েছে");
+            setTimeout(function () {
+                $("#copy-btn").html("লেখা কপি করুন");
+            }, 2000);
+        })
+        .catch(err => {
+            console.error('Could not copy text: ', err);
+        });
+});

@@ -1,45 +1,48 @@
-{"manifest_version":2,
-    "browser_action": {
-        "default_popup": "index.html",
-        "default_title": "Avro",
-        "default_icon": {
-            "128": "images/i128.png", 
-            "32": "images/i32.png", 
-            "16": "images/i16.png"}
-      },
-      "icons": {
-        "128": "images/i128.png", 
-        "32": "images/i32.png", 
-        "16": "images/i16.png"
-      },
-      "background": {
-        "persistent": false,
-        "scripts": [
-          "background.js",
-          "vendor/jquery/dist/jquery.js",
-          "vendor/Caret.js/src/jquery.caret.js",
-          "vendor/jquery.atwho/dist/js/jquery.atwho.js",
-          "vendor/jquery-autosize/jquery.autosize.js",
-          "vendor/jquery-touchswipe/jquery.touchSwipe.js",
-          "vendor/device.js/lib/device.js",
-          "js/avro.min.js",
-          "js/main.js",
-          "js/misc.js",
-          "js/options.js"
-        ]
-      },
-      "content_scripts": [
-        {
-          "matches": ["<all_urls>"],
-          "js": ["js/fontfix.js"],
-          "run_at": "document_end"
-        }
-      ],
-      "permissions": ["storage","activeTab"],
-      
-    
-     "name":"Avro (অভ্র) for Chrome",
-     "short_name":"Avro(অভ্র)",
-     "version":"1.2.7",
-     "description":"Avro extension for chrome . Write bangla instantly."
+{
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Avro",
+    "default_icon": {
+      "128": "images/i128.png",
+      "32": "images/i32.png",
+      "16": "images/i16.png"
     }
+  },
+  "icons": {
+    "128": "images/i128.png",
+    "32": "images/i32.png",
+    "16": "images/i16.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/fontfix.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["storage"],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "vendor/jquery/dist/jquery.js",
+        "vendor/Caret.js/src/jquery.caret.js",
+        "vendor/jquery.atwho/dist/js/jquery.atwho.js",
+        "vendor/jquery-autosize/jquery.autosize.js",
+        "vendor/jquery-touchswipe/jquery.touchSwipe.js",
+        "vendor/device.js/lib/device.js",
+        "js/avro.min.js",
+        "js/main.js",
+        "js/options.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "name": "Avro (অভ্র) for Chrome",
+  "short_name": "Avro(অভ্র)",
+  "version": "1.2.8",
+  "description": "Avro extension for chrome. Write Bangla instantly."
+}
