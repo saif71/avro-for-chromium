@@ -17,30 +17,9 @@
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["js/fontfix.js"],
-      "run_at": "document_end"
-    }
-  ],
+
   "permissions": ["storage"],
-  "web_accessible_resources": [
-    {
-      "resources": [
-        "vendor/jquery/dist/jquery.js",
-        "vendor/Caret.js/src/jquery.caret.js",
-        "vendor/jquery.atwho/dist/js/jquery.atwho.js",
-        "vendor/jquery-autosize/jquery.autosize.js",
-        "vendor/jquery-touchswipe/jquery.touchSwipe.js",
-        "vendor/device.js/lib/device.js",
-        "js/avro.min.js",
-        "js/main.js",
-        "js/options.js"
-      ],
-      "matches": ["<all_urls>"]
-    }
-  ],
+
   "name": "Avro (অভ্র) for Chrome",
   "short_name": "Avro(অভ্র)",
   "version": "1.2.8",
