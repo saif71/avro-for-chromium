@@ -6,7 +6,7 @@ for chrome works with any chromium based browser that supports installing extens
 
 ---
 
-![Repo Size](https://img.shields.io/github/repo-size/saif71/avro-for-chromium.svg) ![Maintained](https://img.shields.io/maintenance/yes/2024.svg) ![Rating](https://img.shields.io/chrome-web-store/rating/lhkaiconcchjcnnikjdphljgfpjelpnj.svg?label=Chrome%20Store%20Rating) ![](https://img.shields.io/website/https/avro.im.svg?label=avro.im) ![Latest Version](https://img.shields.io/chrome-web-store/v/lhkaiconcchjcnnikjdphljgfpjelpnj.svg)
+![Repo Size](https://img.shields.io/github/repo-size/saif71/avro-for-chromium.svg) ![Maintained](https://img.shields.io/maintenance/yes/2025.svg) ![Rating](https://img.shields.io/chrome-web-store/rating/lhkaiconcchjcnnikjdphljgfpjelpnj.svg?label=Chrome%20Store%20Rating) ![](https://img.shields.io/website/https/avro.im.svg?label=avro.im) ![Latest Version](https://img.shields.io/chrome-web-store/v/lhkaiconcchjcnnikjdphljgfpjelpnj.svg)
 
 ---
 
