@@ -1,50 +1,34 @@
 document.getElementById("myCheckbox").addEventListener("change", switchMode);
-function applyDark() {
-    $("#wrapper").addClass("wrapper_dark");
-    $("#wrapper").removeClass("wrapper_light");
 
-    $("textarea").addClass("text_dark_mode");
-    $("footer").addClass("footer_dark");
+function applyDark() {
+    document.documentElement.classList.add("dark");
+    document.documentElement.classList.remove("light");
 }
 
 function applyLight() {
-    $("#wrapper").addClass("wrapper_light");
-    $("#wrapper").removeClass("wrapper_dark");
-    $("textarea").removeClass("text_dark_mode");
-    $("footer").removeClass("footer_dark");
+    document.documentElement.classList.add("light");
+    document.documentElement.classList.remove("dark");
 }
 
 function switchMode() {
-
-    if (document.getElementById("myCheckbox").checked === true) {
-        // changeCSS('/css/main_dark.css', 2);
-        applyDark()
-        localStorage.setItem("modePrefLS", "dark");
-
-    } else {
-        // changeCSS('/css/main.css', 2);
-        applyLight()
-        localStorage.setItem("modePrefLS", "light");
-    }
-
+  if (document.getElementById("myCheckbox").checked === true) {
+    applyDark();
+    localStorage.setItem("modePrefLS", "dark");
+  } else {
+    applyLight();
+    localStorage.setItem("modePrefLS", "light");
+  }
 }
 
-
 function loadModePref() {
-
-    console.log(localStorage.getItem("modePrefLS") + " mode loaded");
-    var modeLoad = localStorage.getItem("modePrefLS");
-
-    if (modeLoad === "light" || modeLoad === null) {
-
-        applyLight()
-        document.getElementById("myCheckbox").checked = false;
-    }
-    else {
-
-        applyDark()
-        document.getElementById("myCheckbox").checked = true;
-    }
+  var modeLoad = localStorage.getItem("modePrefLS");
+  if (modeLoad === "dark") {
+    applyDark();
+    document.getElementById("myCheckbox").checked = true;
+  } else {
+    applyLight();
+    document.getElementById("myCheckbox").checked = false;
+  }
 }
 
 loadModePref();
@@ -55,7 +39,9 @@ $("#add_draft").click(function () {
     var new_draft = "শুন্য ড্রাফট ";
     if (new_draft) {
         var new_draft_html =
-            '<li><a href="#">' + new_draft + "</a></li>";
+          '<li><a href="#">' +
+          new_draft +
+          '</a><button class="delete-draft" title="ড্রাফট মুছুন">&times;</button></li>';
         $(".drafts ul").append(new_draft_html);
 
     }
@@ -72,7 +58,7 @@ function addDraftsFromLocalStorage() {
     }
     for (var i = 0; i < draftKeys.length - 1; i++) {
         var new_draft_html =
-            '<li><a href="#">-</a></li>';
+          '<li><a href="#">-</a><button class="delete-draft" title="ড্রাফট মুছুন">&times;</button></li>';
         $(".drafts ul").append(new_draft_html);
     }
     document.getElementById("draft_count").innerHTML = draftKeys.length;
@@ -87,10 +73,26 @@ $("#copy-btn").click(function () {
         .then(() => {
             $(this).html("✅ কপি হয়েছে");
             setTimeout(function () {
-                $("#copy-btn").html("লেখা কপি করুন");
+                $("#copy-btn").html("কপি");
             }, 2000);
         })
         .catch(err => {
             console.error('Could not copy text: ', err);
         });
 });
+
+var pinSidebarBtn = document.getElementById("pin-sidebar-btn");
+if (pinSidebarBtn) {
+    pinSidebarBtn.addEventListener("click", function () {
+        chrome.runtime.sendMessage({ action: "openSidePanel" });
+        window.close();
+    });
+}
+(function () {
+  var mode = localStorage.getItem("modePrefLS");
+  if (mode === "dark") {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.add("light");
+  }
+})();
