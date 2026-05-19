@@ -4,6 +4,8 @@ Avro (অভ্র) extension
 
 for chrome works with any chromium based browser that supports installing extensions from chrome web store.
 
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/thYtePzj7Ko?si=vm7OFp7ICQrE50Pq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ---
 
 ![Repo Size](https://img.shields.io/github/repo-size/saif71/avro-for-chromium.svg) ![Maintained](https://img.shields.io/maintenance/yes/2026.svg) ![Rating](https://img.shields.io/chrome-web-store/rating/lhkaiconcchjcnnikjdphljgfpjelpnj.svg?label=Chrome%20Store%20Rating) ![](https://img.shields.io/website/https/avro.im.svg?label=avro.im) ![Latest Version](https://img.shields.io/chrome-web-store/v/lhkaiconcchjcnnikjdphljgfpjelpnj.svg)
