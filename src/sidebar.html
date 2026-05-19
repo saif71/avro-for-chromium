@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="IE=edge" />
-    <meta property="og:url" content="http://avro.im/" />
     <meta
       name="description"
       content="avro.im - Bangla typing tool for the Web. Use Avro Phonetic on your browser without installing any additional tool."
@@ -13,50 +12,23 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="mobile-web-app-capable" content="yes" />
 
-    <title>Avro (অভ্র) for Chrome| Write Bangla Instantly</title>
-    <!-- build:css css/app.css -->
+    <title>Avro (অভ্র) Sidebar</title>
     <link
       rel="stylesheet"
       href="vendor/jquery.atwho/dist/css/jquery.atwho.css"
       type="text/css"
       media="screen"
     />
-    <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
     <link rel="stylesheet" href="css/misc.css" />
-    <!-- endbuild -->
-    <!-- FAVICON -->
+    <link rel="stylesheet" href="css/sidebar.css" />
     <link rel="icon" href="images/apple-touch-icon.png" />
   </head>
 
   <body>
-    <!-- <div id="loader" style="display:block">
-		<div class="container">
-			<div class="anim-container">
-				<div class="ex"></div>
-				<div class="ex"></div>
-				<div class="ex"></div>
-				<div class="ex"></div>
-			</div>
-			<h1>Loading for the last Time...</h1>
-		</div>
-	</div> -->
-    <!-- <script>
-		setTimeout(function () {
-			var elem = document.getElementById("loader");
-			if (!!elem) elem.style.display = "block";
-		}, 500);
-	</script> -->
-    <div id="wrapper" class="cf">
-      <div class="cf toggle flex justify-between config_panel items-center">
-        <!-- <a href="fontfix.html" class="right font_fix_btn" title="Font Fixer: Set Default Bangla Font"> 🛠  Bangla Font Fixer</a> -->
-        <!-- <div class="desktop-only label left">CONTROL</div>
-      <div class="desktop-only label left normal">+</div>
-      <div class="desktop-only label left">.</div> -->
+    <div id="sidebar_wrapper" class="cf">
+      <div class="cf toggle flex justify-between config_panel items-center" id="sidebar_config_panel">
         <div>
           <div class="desktop-only left">টাইপ মোড&nbsp;&nbsp;</div>
           <div class="swipe left">
@@ -74,16 +46,14 @@
             <label for="myCheckbox" data-on="ডার্ক" data-off="লাইট"></label>
           </span>
         </div>
-        <button id="pin-sidebar-btn" title="Pin as Sidebar">
-          সাইডবার
-        </button>
         <button id="copy-btn" title="Copy to Clipboard">
           কপি
         </button>
       </div>
-      <main>
+      <main id="sidebar_main">
         <div class="content">
           <textarea
+            id="sidebar_typing_area"
             disabled="true"
             placeholder="এখানে লিখুন"
             spellcheck="false"
@@ -93,7 +63,7 @@
           ></textarea>
         </div>
       </main>
-      <footer>
+      <footer id="sidebar_footer">
         <div class="wrapper">
           <div class="drafts">
             <div
@@ -112,16 +82,11 @@
             </div>
             <ul>
               <li><a href="#">ড্রাফট ১</a><button class="delete-draft" title="ড্রাফট মুছুন">&times;</button></li>
-              <!-- <li><a href="#">ড্রাফট ২</a></li>
-              <li><a href="#">ড্রাফট ৩</a></li>
-              <li><a href="#">ড্রাফট ৪</a></li>
-              <li><a href="#">ড্রাফট ৫</a></li> -->
             </ul>
           </div>
         </div>
       </footer>
     </div>
-    <!-- build:js js/app.js -->
     <script src="vendor/jquery/dist/jquery.js"></script>
     <script src="vendor/Caret.js/src/jquery.caret.js"></script>
     <script src="vendor/jquery.atwho/dist/js/jquery.atwho.js"></script>
@@ -131,6 +96,5 @@
     <script src="js/avro.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/misc.js"></script>
-    <!-- endbuild -->
   </body>
 </html>

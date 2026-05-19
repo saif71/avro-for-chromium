@@ -131,6 +131,57 @@ $(function () {
     loadDraftId(currentDraftId);
   });
 
+  $(".drafts ul").on("click", ".delete-draft", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var $li = $(this).closest("li");
+    var id = $li.index();
+
+    if (drafts.length <= 1) {
+      drafts[0] = "";
+      LS["draft-0"] = JSON.stringify("");
+      $li.find("a").text(makeTitle("", 0));
+      $editor.val("").trigger("autosize.resize").focus();
+      return;
+    }
+
+    drafts.splice(id, 1);
+    var lsKeys = [];
+    for (var i = 0; i < localStorage.length; i++) {
+      var key = localStorage.key(i);
+      if (key.indexOf("draft-") === 0) lsKeys.push(key);
+    }
+    lsKeys.sort(function (a, b) {
+      return parseInt(a.split("-")[1]) - parseInt(b.split("-")[1]);
+    });
+    lsKeys.forEach(function (k) {
+      localStorage.removeItem(k);
+    });
+    drafts.forEach(function (d, i) {
+      localStorage["draft-" + i] = JSON.stringify(d);
+    });
+
+    $li.fadeOut(200, function () {
+      $li.remove();
+      $(".drafts ul li").each(function (idx) {
+        $(this).find("a").text(makeTitle(drafts[idx], idx));
+      });
+      document.getElementById("draft_count").innerHTML = drafts.length;
+
+      if (currentDraftId === id) {
+        var newId = id >= drafts.length ? drafts.length - 1 : id;
+        currentDraftId = newId;
+        var $newLi = $(".drafts ul li").eq(newId);
+        $newLi.addClass("active");
+        $current = $newLi.find("a");
+        loadDraftId(newId);
+      } else if (currentDraftId > id) {
+        currentDraftId--;
+        $current = $(".drafts ul li").eq(currentDraftId).find("a");
+      }
+    });
+  });
+
   // Init
   fetchAllDrafts();
   // Load the first draft

@@ -184,6 +184,23 @@ footer .wrapper {
   border-right: 1px solid #333;
 }
 
+.delete-draft {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.delete-draft:hover {
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.15);
+}
 footer .logo {
   background: url("../images/logo-secondary.png") no-repeat bottom right;
   margin-top: 10px;
@@ -204,11 +221,15 @@ footer h2 {
   font-size: 15px;
   font-weight: 600;
 }
-
+footer ul li {
+  display: flex;
+  align-items: center;
+}
 footer ul li a {
   display: block;
   padding: 5px;
   margin: 5px 0;
+  flex: 1;
 }
 
 footer ul li.active a {
@@ -419,17 +440,14 @@ label {
 }
 
 /*dark css*/
-.wrapper_dark {
+html.dark #wrapper {
   background: #212121 !important;
 }
-.footer_dark {
+html.dark footer {
   color: #eee;
   background: #303030 !important;
 }
-.text_light_mode {
-  color: #232323 !important;
-}
-.text_dark_mode {
+html.dark textarea {
   color: #dfdbdb !important;
 }
 
@@ -475,4 +493,16 @@ label {
   color: #ffa729;
   border-radius: 8px;
   padding: 5px 10px;
+}
+#pin-sidebar-btn {
+  border: 2px solid #ffa729;
+  background: none;
+  color: #ffa729;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+#pin-sidebar-btn:hover {
+  background: #ffa729;
+  color: #1f1f1f;
+  cursor: pointer;
 }
