@@ -386,22 +386,4 @@ $(function () {
     allowPageScroll: 'vertical'
   });
 
-  function handleAppCache() {
-    if (applicationCache == undefined) {
-      console.log
-        ('Application Cache not supported in this browser.');
-      return;
-    }
-
-    if (applicationCache.status == applicationCache.UPDATEREADY) {
-      applicationCache.swapCache();
-      location.reload();
-      return;
-    }
-
-    applicationCache.addEventListener('updateready', handleAppCache, false);
-  }
-
-  handleAppCache();
-
 });
